@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:tools="http://schemas.android.com/tools" tools:keep="@string/gcm_defaultSenderId,@string/google_storage_bucket,@string/project_id,@string/google_api_key,@string/google_crash_reporting_api_key,@string/google_app_id">
+  <string name="gcm_defaultSenderId" translatable="false">47688789358</string>
+  <string name="google_storage_bucket" translatable="false">dungeon-masters-survival.firebasestorage.app</string>
+  <string name="project_id" translatable="false">dungeon-masters-survival</string>
+  <string name="google_api_key" translatable="false">AIzaSyDphP7ovSEqU7pRzHJh3O9tD-pCgZIgeCM</string>
+  <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDphP7ovSEqU7pRzHJh3O9tD-pCgZIgeCM</string>
+  <string name="google_app_id" translatable="false">1:47688789358:android:91d4a2af502121eb95e57f</string>
+</resources>

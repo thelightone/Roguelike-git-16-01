@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76098c22e60af4a43b70026ab143a59d, type: 3}
+  m_Name: CasualChestFantasy_Legendary
+  m_EditorClassIdentifier: 
+  m_ChestMesh: {fileID: 3694675440217488109, guid: acaa7c27eba0646089964df833da97c2, type: 3}
+  m_ChestTexture: {fileID: 2800000, guid: d25244ba766ad4baaae2d6fdffd983a3, type: 3}
+  m_ChestMaskMap: {fileID: 2800000, guid: 98f030be0f5c6465d838e419631a53bf, type: 3}
+  m_AmountOfCards: 1
+  m_URPUnlit: {fileID: 2100000, guid: 106d9f03c129444aea806e6c914a430a, type: 2}
+  m_URPOnlySpec: {fileID: 2100000, guid: d8d43ee10300b4df9a53f65001c45a37, type: 2}
+  m_URPDiffSpec: {fileID: 2100000, guid: 74a235645679048158180ff4c67ad06a, type: 2}
+  m_BuiltInUnlit: {fileID: 2100000, guid: 4385832bd32384a5cb461a70da5d1a47, type: 2}
+  m_BuiltInOnlySpec: {fileID: 2100000, guid: 431581ef030f44e8a88217d579437418, type: 2}
+  m_BuiltInDiffSpec: {fileID: 2100000, guid: a07e20687881e40c685bad147ce288a7, type: 2}

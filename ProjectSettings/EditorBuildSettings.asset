@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1045 &1
+EditorBuildSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Scenes:
+  - enabled: 1
+    path: Assets/MainFolder/Scenes/MenuScene.unity
+    guid: 135f2b67bc33a2749842a3fa110929a6
+  - enabled: 1
+    path: Assets/MainFolder/Scenes/BattleSceneForest 1.unity
+    guid: 9770cf129a6880a49b6af7bec0f283a2
+  - enabled: 1
+    path: Assets/MainFolder/Scenes/BattleSceneIce 1.unity
+    guid: cac509aef4a9e01498cb9c714ea3b1ef
+  m_configObjects: {}

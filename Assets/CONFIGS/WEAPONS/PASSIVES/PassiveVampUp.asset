@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06f4f6f2878bc6842aa656d90e706094, type: 3}
+  m_Name: PassiveVampUp
+  m_EditorClassIdentifier: 
+  passiveItemData:
+  - addedHealth: 0
+    addedRegenerate: 0
+    multiplDamage: 0
+    multiplSpeed: 0
+    multiplHitForce: 0
+    multiplHitForceUp: 0
+    multiplRotation: 0
+    addedDefence: 0
+    multiplyAttackSpeed: 0
+    addedVamp: 5
+  - addedHealth: 0
+    addedRegenerate: 0
+    multiplDamage: 0
+    multiplSpeed: 0
+    multiplHitForce: 0
+    multiplHitForceUp: 0
+    multiplRotation: 0
+    addedDefence: 0
+    multiplyAttackSpeed: 0
+    addedVamp: 5
+  - addedHealth: 0
+    addedRegenerate: 0
+    multiplDamage: 0
+    multiplSpeed: 0
+    multiplHitForce: 0
+    multiplHitForceUp: 0
+    multiplRotation: 0
+    addedDefence: 0
+    multiplyAttackSpeed: 0
+    addedVamp: 10

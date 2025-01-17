@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38273e8b457c9874d98341730982d8de, type: 3}
+  m_Name: ShopData
+  m_EditorClassIdentifier: 
+  heroMaxHealthLevel: 0
+  heroRegenerateLevel: 0
+  heroSpeedLevel: 0
+  heroDefenceLevel: 0
+  heroMultiplyCoinCollectLevel: 0
+  heroMultiplyXpReceivedLevel: 0
+  weapHitForceLevel: 0
+  weapMultiplRotationLevel: 0
+  weapAttackSpeedLevel: 0
+  weapDamageLevel: 0
+  priceModif: 1
