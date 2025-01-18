@@ -30,7 +30,7 @@ public class HeroShopData : MonoBehaviour
 
     public void Init()
     {
-        Debug.Log(PlayerPrefs.GetInt("hero", 0));
+
         if (PlayerPrefs.GetInt("hero", 0) == id)
         {
             chooseBG.SetActive(true);

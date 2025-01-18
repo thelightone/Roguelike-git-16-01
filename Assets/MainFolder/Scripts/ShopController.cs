@@ -330,9 +330,9 @@ public class ShopController : MonoBehaviour
             };
 
             string json = JsonUtility.ToJson(eventData);
-            AppMetrica.Instance.ReportEvent(AppMetricaEventsTypes.buy_upgrade, json);
+            //AppMetrica.Instance.ReportEvent(AppMetricaEventsTypes.buy_upgrade, json);
 
-            AppMetrica.Instance.SendEventsBuffer();
+            //AppMetrica.Instance.SendEventsBuffer();
         }
 
         
@@ -373,8 +373,8 @@ public class ShopController : MonoBehaviour
         };
 
         string json = JsonUtility.ToJson(eventData);
-        AppMetrica.Instance.ReportEvent(AppMetricaEventsTypes.buy_upgrade, json);
+        //AppMetrica.Instance.ReportEvent(AppMetricaEventsTypes.buy_upgrade, json);
 
-        AppMetrica.Instance.SendEventsBuffer();
+        //AppMetrica.Instance.SendEventsBuffer();
     }
 }

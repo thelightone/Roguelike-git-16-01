@@ -10,3 +10,18 @@ pluginManagement {
 include ':launcher', ':unityLibrary'
 **INCLUDES**
 
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        **ARTIFACTORYREPOSITORY**
+        google()
+        mavenCentral()
+// Android Resolver Repos Start
+        def unityProjectPath = $/file:///**DIR_UNITYPROJECT**/$.replace("\\", "/")
+        mavenLocal()
+// Android Resolver Repos End
+        flatDir {
+            dirs "${project(':unityLibrary').projectDir}/libs"
+        }
+    }
+}

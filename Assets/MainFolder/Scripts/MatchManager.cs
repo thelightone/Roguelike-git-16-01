@@ -65,7 +65,7 @@ public class MatchManager : MonoBehaviour
            level = PrefsManager.GetChosenLevelCharter1();
             charter = 0;
         }
-        else if ( SceneManager.GetActiveScene().name == "BattleSceneIce")
+        else if ( SceneManager.GetActiveScene().name == "BattleSceneIce 1")
         {
             level = PrefsManager.GetChosenLevelCharter2();
             charter = 1;
@@ -110,7 +110,6 @@ public class MatchManager : MonoBehaviour
 
        // AudioManager.Instance.StartBattle();
         EnemySpawner.Instance.maxEnemy = _maxEnemies;
-        Debug.Log("LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL "+ _waveData.enemiesDamageMultiplier);
         EnemySpawner.Instance.enemiesDamageMultiplier = _waveData.enemiesDamageMultiplier;
         EnemySpawner.Instance.enemiesHealthMultiplier = _waveData.enemiesHealthMultiplier;
         EnemySpawner.Instance.enemiesSpeedMultiplier = _waveData.enemiesSpeedMultiplier;
@@ -122,18 +121,18 @@ public class MatchManager : MonoBehaviour
 
         finalWave = _curWave + 1 < _levelData.waveData.Count ? false : true;
 
+        GAManager.instance.OnLevelStarted(level);
 
 
+        //LevelStartEventData eventData = new LevelStartEventData() { level = PrefsManager.GetChosenLevelCharter1(), days_since_reg = PrefsManager.DaysFromReg() };
+        //string json = JsonUtility.ToJson(eventData);
+        //AppMetrica.Instance.ReportEvent(AppMetricaEventsTypes.level_start, json);
 
-        LevelStartEventData eventData = new LevelStartEventData() { level = PrefsManager.GetChosenLevelCharter1(), days_since_reg = PrefsManager.DaysFromReg() };
-        string json = JsonUtility.ToJson(eventData);
-        AppMetrica.Instance.ReportEvent(AppMetricaEventsTypes.level_start, json);
+        //WaveStartEventData eventData2 = new WaveStartEventData() { level = PrefsManager.GetChosenLevelCharter1(), wave = _curWave, days_since_reg = PrefsManager.DaysFromReg() };
+        //json = JsonUtility.ToJson(eventData2);
+        //AppMetrica.Instance.ReportEvent(AppMetricaEventsTypes.wave_start, json);
 
-        WaveStartEventData eventData2 = new WaveStartEventData() { level = PrefsManager.GetChosenLevelCharter1(), wave = _curWave, days_since_reg = PrefsManager.DaysFromReg() };
-        json = JsonUtility.ToJson(eventData2);
-        AppMetrica.Instance.ReportEvent(AppMetricaEventsTypes.wave_start, json);
-
-        AppMetrica.Instance.SendEventsBuffer();
+        //AppMetrica.Instance.SendEventsBuffer();
 
       //  StartCoroutine(FirstTutor());
     }
@@ -190,9 +189,9 @@ public class MatchManager : MonoBehaviour
         WaveStartEventData eventData = new WaveStartEventData() { level = PrefsManager.GetChosenLevelCharter1(), wave = _curWave, days_since_reg = PrefsManager.DaysFromReg() };
         string json = JsonUtility.ToJson(eventData);
 
-        AppMetrica.Instance.ReportEvent(AppMetricaEventsTypes.wave_start, json);
+        //AppMetrica.Instance.ReportEvent(AppMetricaEventsTypes.wave_start, json);
 
-        AppMetrica.Instance.SendEventsBuffer();
+        //AppMetrica.Instance.SendEventsBuffer();
     }
 
     public void Revive()
@@ -314,22 +313,18 @@ public class MatchManager : MonoBehaviour
 
     public void Win()
     {
-        Debug.Log("Win" + 2);
+        GAManager.instance.OnLevelComplete(level);
         _end = End.Win;
         _gameEnd = true;
         PlayerMoveController.Instance.allowRegen = false;
-        Debug.Log("Win" + 3);
         if (finalWave)
         {
-            Debug.Log("Win" + 4);
-            // YsoCorp.GameUtils.YCManager.instance.OnGameFinished(true);
 
             PlayerMoveController.Instance.coins += 0;
             PlayerMoveController.Instance.gems += 0;
 
             if (charter == 0)
             {
-                Debug.Log("Win" + 5);
                 if (PrefsManager.GetChosenLevelCharter1() == PrefsManager.GetUnlockedLevelCharter1())
                 {
                     PrefsManager.ChangeUnlockedLevel1(1);
@@ -352,7 +347,6 @@ public class MatchManager : MonoBehaviour
                     PrefsManager.ChangeChosenLevel2(PrefsManager.GetChosenLevelCharter2() + 1);
                 }
             }
-            Debug.Log("Win" + 6);
             PrefsManager.ChangePlayerXP(60);
 
             //LevelCompleteEventData eventData2 = new LevelCompleteEventData()
@@ -374,9 +368,7 @@ public class MatchManager : MonoBehaviour
         PrefsManager.ChangeGems(PlayerMoveController.Instance.gems);
         EnemySpawner.Instance.StopSpawn();
         StopAllCoroutines();
-        Debug.Log("Win" + 7);
         _uiManager.ShowWin();
-        Debug.Log("Win" + 8);
         AudioManager.Instance.OnWin();
 
         //WaveCompleteEventData eventData3 = new WaveCompleteEventData()
@@ -430,7 +422,7 @@ public class MatchManager : MonoBehaviour
 
     private void Lose()
     {
-
+        GAManager.instance.OnLevelLose(level);
         //LevelFailEventData eventData = new LevelFailEventData() 
         //{
         //    level = PrefsManager.GetChosenLevelCharter1(), 

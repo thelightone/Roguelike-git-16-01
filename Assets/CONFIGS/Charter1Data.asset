@@ -16,13 +16,13 @@ MonoBehaviour:
   levelData:
   - maxReward: 20
     waveData:
-    - duration: 40
+    - duration: 15
       maxEnemies: 30
       enemiesHealthMultiplier: 0.5
       enemiesDamageMultiplier: 0.5
       enemiesSpeedMultiplier: 1
-      bossWave: 0
-      bossData: {fileID: 0}
+      bossWave: 1
+      bossData: {fileID: 11400000, guid: e6b220cf397e1a543af9c2f1ed0dd873, type: 2}
       enemyData:
       - {fileID: 11400000, guid: 7b04c7c05c1685443a2f1a6b460ac739, type: 2}
       - {fileID: 11400000, guid: c5a45622b427d8c478109f8efa54f100, type: 2}

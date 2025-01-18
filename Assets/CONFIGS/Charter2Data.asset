@@ -16,7 +16,7 @@ MonoBehaviour:
   levelData:
   - maxReward: 20
     waveData:
-    - duration: 60
+    - duration: 5
       maxEnemies: 30
       enemiesHealthMultiplier: 1
       enemiesDamageMultiplier: 1

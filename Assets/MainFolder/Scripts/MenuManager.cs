@@ -152,6 +152,8 @@ public class MenuManager : MonoBehaviour
             startBut2.SetActive(true);
             lock2.SetActive(true);
         }
+
+        GAManager.instance.OnGameStarted();
     }
 
     private void ChangeLevel(int change)
