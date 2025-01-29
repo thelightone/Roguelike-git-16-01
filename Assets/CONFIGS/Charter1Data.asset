@@ -1,0 +1,204 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 672f89af9d309a7499edd6b36f752c6e, type: 3}
+  m_Name: Charter1Data
+  m_EditorClassIdentifier: 
+  sceneIndex: 1
+  levelData:
+  - maxReward: 20
+    waveData:
+    - duration: 15
+      maxEnemies: 30
+      enemiesHealthMultiplier: 0.5
+      enemiesDamageMultiplier: 0.5
+      enemiesSpeedMultiplier: 1
+      bossWave: 1
+      bossData: {fileID: 11400000, guid: e6b220cf397e1a543af9c2f1ed0dd873, type: 2}
+      enemyData:
+      - {fileID: 11400000, guid: 7b04c7c05c1685443a2f1a6b460ac739, type: 2}
+      - {fileID: 11400000, guid: c5a45622b427d8c478109f8efa54f100, type: 2}
+      - {fileID: 11400000, guid: 36864b8137c1f08498e4da672530a35c, type: 2}
+    weapUnlocked: {fileID: 7207799566791842538, guid: ecb24b551ace9cd4abd87b36b4891ef9, type: 3}
+  - maxReward: 100
+    waveData:
+    - duration: 60
+      maxEnemies: 30
+      enemiesHealthMultiplier: 0.7
+      enemiesDamageMultiplier: 0.7
+      enemiesSpeedMultiplier: 1
+      bossWave: 0
+      bossData: {fileID: 0}
+      enemyData:
+      - {fileID: 11400000, guid: b8056a7f39def874fac2b4324c9a4236, type: 2}
+      - {fileID: 11400000, guid: aa15413dd710c6c42916cab13ee5a028, type: 2}
+      - {fileID: 11400000, guid: 5c53bbafda658f043ba7bee5b25ab11b, type: 2}
+    - duration: 60
+      maxEnemies: 35
+      enemiesHealthMultiplier: 1
+      enemiesDamageMultiplier: 1
+      enemiesSpeedMultiplier: 1
+      bossWave: 0
+      bossData: {fileID: 0}
+      enemyData:
+      - {fileID: 11400000, guid: 7b04c7c05c1685443a2f1a6b460ac739, type: 2}
+      - {fileID: 11400000, guid: 62e692f3242408a45870349c7fc50881, type: 2}
+      - {fileID: 11400000, guid: 36864b8137c1f08498e4da672530a35c, type: 2}
+    - duration: 60
+      maxEnemies: 40
+      enemiesHealthMultiplier: 1
+      enemiesDamageMultiplier: 1
+      enemiesSpeedMultiplier: 1
+      bossWave: 1
+      bossData: {fileID: 11400000, guid: 9811afb089cf853479380a2e3e68767c, type: 2}
+      enemyData:
+      - {fileID: 11400000, guid: b8056a7f39def874fac2b4324c9a4236, type: 2}
+      - {fileID: 11400000, guid: c5a45622b427d8c478109f8efa54f100, type: 2}
+      - {fileID: 11400000, guid: 5c53bbafda658f043ba7bee5b25ab11b, type: 2}
+    weapUnlocked: {fileID: 1612851955354107905, guid: 35a16b72003c2a04a8d008483574f67b, type: 3}
+  - maxReward: 250
+    waveData:
+    - duration: 60
+      maxEnemies: 30
+      enemiesHealthMultiplier: 1
+      enemiesDamageMultiplier: 1
+      enemiesSpeedMultiplier: 1
+      bossWave: 0
+      bossData: {fileID: 0}
+      enemyData:
+      - {fileID: 11400000, guid: 7b04c7c05c1685443a2f1a6b460ac739, type: 2}
+      - {fileID: 11400000, guid: aa15413dd710c6c42916cab13ee5a028, type: 2}
+      - {fileID: 11400000, guid: 36864b8137c1f08498e4da672530a35c, type: 2}
+    - duration: 60
+      maxEnemies: 35
+      enemiesHealthMultiplier: 1
+      enemiesDamageMultiplier: 1
+      enemiesSpeedMultiplier: 1
+      bossWave: 0
+      bossData: {fileID: 0}
+      enemyData:
+      - {fileID: 11400000, guid: b8056a7f39def874fac2b4324c9a4236, type: 2}
+      - {fileID: 11400000, guid: 62e692f3242408a45870349c7fc50881, type: 2}
+      - {fileID: 11400000, guid: 5c53bbafda658f043ba7bee5b25ab11b, type: 2}
+    - duration: 60
+      maxEnemies: 40
+      enemiesHealthMultiplier: 1
+      enemiesDamageMultiplier: 1
+      enemiesSpeedMultiplier: 1
+      bossWave: 1
+      bossData: {fileID: 11400000, guid: 9811afb089cf853479380a2e3e68767c, type: 2}
+      enemyData:
+      - {fileID: 11400000, guid: 7b04c7c05c1685443a2f1a6b460ac739, type: 2}
+      - {fileID: 11400000, guid: aa15413dd710c6c42916cab13ee5a028, type: 2}
+      - {fileID: 11400000, guid: 5c53bbafda658f043ba7bee5b25ab11b, type: 2}
+    - duration: 60
+      maxEnemies: 45
+      enemiesHealthMultiplier: 1
+      enemiesDamageMultiplier: 1
+      enemiesSpeedMultiplier: 1
+      bossWave: 0
+      bossData: {fileID: 0}
+      enemyData:
+      - {fileID: 11400000, guid: b8056a7f39def874fac2b4324c9a4236, type: 2}
+      - {fileID: 11400000, guid: c5a45622b427d8c478109f8efa54f100, type: 2}
+      - {fileID: 11400000, guid: 36864b8137c1f08498e4da672530a35c, type: 2}
+    - duration: 60
+      maxEnemies: 45
+      enemiesHealthMultiplier: 1
+      enemiesDamageMultiplier: 1
+      enemiesSpeedMultiplier: 1
+      bossWave: 1
+      bossData: {fileID: 11400000, guid: d8af8d53be8d78a4083988a60a03bcd7, type: 2}
+      enemyData:
+      - {fileID: 11400000, guid: 7b04c7c05c1685443a2f1a6b460ac739, type: 2}
+      - {fileID: 11400000, guid: 62e692f3242408a45870349c7fc50881, type: 2}
+      - {fileID: 11400000, guid: 5c53bbafda658f043ba7bee5b25ab11b, type: 2}
+    weapUnlocked: {fileID: 3818913453017170620, guid: 2d751fe790211164cbb1cd51c8ea5840, type: 3}
+  - maxReward: 500
+    waveData:
+    - duration: 60
+      maxEnemies: 30
+      enemiesHealthMultiplier: 1
+      enemiesDamageMultiplier: 1
+      enemiesSpeedMultiplier: 1
+      bossWave: 0
+      bossData: {fileID: 11400000, guid: 9811afb089cf853479380a2e3e68767c, type: 2}
+      enemyData:
+      - {fileID: 11400000, guid: b8056a7f39def874fac2b4324c9a4236, type: 2}
+      - {fileID: 11400000, guid: aa15413dd710c6c42916cab13ee5a028, type: 2}
+      - {fileID: 11400000, guid: 36864b8137c1f08498e4da672530a35c, type: 2}
+    - duration: 60
+      maxEnemies: 35
+      enemiesHealthMultiplier: 1
+      enemiesDamageMultiplier: 1
+      enemiesSpeedMultiplier: 1
+      bossWave: 0
+      bossData: {fileID: 0}
+      enemyData:
+      - {fileID: 11400000, guid: c5a45622b427d8c478109f8efa54f100, type: 2}
+      - {fileID: 11400000, guid: 62e692f3242408a45870349c7fc50881, type: 2}
+      - {fileID: 11400000, guid: 5c53bbafda658f043ba7bee5b25ab11b, type: 2}
+    - duration: 60
+      maxEnemies: 40
+      enemiesHealthMultiplier: 1
+      enemiesDamageMultiplier: 1
+      enemiesSpeedMultiplier: 1
+      bossWave: 0
+      bossData: {fileID: 11400000, guid: 9811afb089cf853479380a2e3e68767c, type: 2}
+      enemyData:
+      - {fileID: 11400000, guid: 7b04c7c05c1685443a2f1a6b460ac739, type: 2}
+      - {fileID: 11400000, guid: aa15413dd710c6c42916cab13ee5a028, type: 2}
+      - {fileID: 11400000, guid: 36864b8137c1f08498e4da672530a35c, type: 2}
+    - duration: 60
+      maxEnemies: 45
+      enemiesHealthMultiplier: 1
+      enemiesDamageMultiplier: 1
+      enemiesSpeedMultiplier: 1
+      bossWave: 0
+      bossData: {fileID: 0}
+      enemyData:
+      - {fileID: 11400000, guid: b8056a7f39def874fac2b4324c9a4236, type: 2}
+      - {fileID: 11400000, guid: c5a45622b427d8c478109f8efa54f100, type: 2}
+      - {fileID: 11400000, guid: 5c53bbafda658f043ba7bee5b25ab11b, type: 2}
+    - duration: 60
+      maxEnemies: 50
+      enemiesHealthMultiplier: 1
+      enemiesDamageMultiplier: 1
+      enemiesSpeedMultiplier: 1
+      bossWave: 0
+      bossData: {fileID: 11400000, guid: d8af8d53be8d78a4083988a60a03bcd7, type: 2}
+      enemyData:
+      - {fileID: 11400000, guid: 7b04c7c05c1685443a2f1a6b460ac739, type: 2}
+      - {fileID: 11400000, guid: 62e692f3242408a45870349c7fc50881, type: 2}
+      - {fileID: 11400000, guid: 5c53bbafda658f043ba7bee5b25ab11b, type: 2}
+    - duration: 60
+      maxEnemies: 50
+      enemiesHealthMultiplier: 1
+      enemiesDamageMultiplier: 1
+      enemiesSpeedMultiplier: 1
+      bossWave: 0
+      bossData: {fileID: 0}
+      enemyData:
+      - {fileID: 11400000, guid: c5a45622b427d8c478109f8efa54f100, type: 2}
+      - {fileID: 11400000, guid: 62e692f3242408a45870349c7fc50881, type: 2}
+      - {fileID: 11400000, guid: aa15413dd710c6c42916cab13ee5a028, type: 2}
+    - duration: 60
+      maxEnemies: 45
+      enemiesHealthMultiplier: 1
+      enemiesDamageMultiplier: 1
+      enemiesSpeedMultiplier: 1
+      bossWave: 0
+      bossData: {fileID: 11400000, guid: 9535569dc42b7f44083b5023e40e858a, type: 2}
+      enemyData:
+      - {fileID: 11400000, guid: b8056a7f39def874fac2b4324c9a4236, type: 2}
+      - {fileID: 11400000, guid: 62e692f3242408a45870349c7fc50881, type: 2}
+      - {fileID: 11400000, guid: 36864b8137c1f08498e4da672530a35c, type: 2}
+    weapUnlocked: {fileID: 0}
