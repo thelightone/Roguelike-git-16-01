@@ -46,7 +46,7 @@ public class ChakrumBulletWeapon : MonoBehaviour
         _enemys = EnemySpawner.Instance.canBeShootList;
        // distance = 10;
 
-        _rb.velocity = Vector3.zero;
+        _rb.linearVelocity = Vector3.zero;
         gameObject.SetActive(true);
         StartCoroutine(Fly());
     }
@@ -86,7 +86,7 @@ public class ChakrumBulletWeapon : MonoBehaviour
 
         var getRepeatRate = 4;
         _collider.enabled= true;
-        _rb.velocity = Vector3.zero;
+        _rb.linearVelocity = Vector3.zero;
 
         _rb.AddForce(transform.forward* GetComponentInParent<ChakrumWeapon>().flySpeed*3, ForceMode.Impulse);
 
@@ -127,7 +127,7 @@ public class ChakrumBulletWeapon : MonoBehaviour
     {
         if (transform.localPosition.x < -9 || transform.localPosition.x > 9 || transform.localPosition.z < -14 || transform.localPosition.z > 12)
         {
-            _rb.velocity = Vector3.zero;
+            _rb.linearVelocity = Vector3.zero;
 
             Vector3 newtrs = new Vector3(PlayerMoveController.Instance.transform.position.x+Random.Range(-20,20),
                 PlayerMoveController.Instance.transform.position.y,

@@ -165,6 +165,7 @@ public class MatchManager : MonoBehaviour
 
     public void NewWave()
     {
+        DeathEffect.Instance.Reset();
         PlayerMoveController.Instance.allowRegen = true;
         _curWave++;
         EnemySpawner.Instance.wavenum = _curWave;

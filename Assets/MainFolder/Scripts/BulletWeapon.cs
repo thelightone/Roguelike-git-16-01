@@ -76,7 +76,7 @@ public class BulletWeapon : MonoBehaviour
             _shootParent._busyEnemies.Add(_enemyController);
         }
         // _shootEnemy = _enemys[Random.Range(0, _enemys.Count - 1)].gameObject;
-        _rb.velocity = Vector3.zero;
+        _rb.linearVelocity = Vector3.zero;
         StartCoroutine(Fly());
     }
 

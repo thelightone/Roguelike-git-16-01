@@ -16,4 +16,14 @@ public class DeathEffect : MonoBehaviour
         transform.position = aim.position;
         particleSystem.Play();
     }
+
+    public void PlayBoss()
+    {
+        particleSystem.transform.localScale = new Vector3(4, 4, 4);
+    }
+
+    public void Reset()
+    {
+        particleSystem.transform.localScale = new Vector3(1, 1, 1);
+    }
 }

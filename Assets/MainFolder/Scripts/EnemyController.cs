@@ -354,7 +354,7 @@ public class EnemyController : MonoBehaviour
         _fly = false;
         _dead = false;
         _rb.useGravity = true;
-        _rb.drag = 0;
+        _rb.linearDamping = 0;
         _deadCorStarted = false;
         _damagePause = false;
         //_deathPS.SetActive(false);

@@ -51,6 +51,10 @@ public class BossController : EnemyController
     {
         upForce = 0;
         force = 1;
+        if (_curHealth-damage<=0)
+        {
+            DeathEffect.Instance.PlayBoss();
+        }
         base.GetHit(force, upForce, damage);
     }
 

@@ -280,7 +280,7 @@ public class PlayerMoveController : MonoBehaviour
         var pos = transform.position;
         _joystick.gameObject.SetActive(false);
         _moveVector = new Vector3(0, 0, 0);
-        _rb.drag = 100;
+        _rb.linearDamping = 100;
         _rb.mass = 100;
         _collider.isTrigger = true;
         Debug.Log(3);
@@ -541,7 +541,7 @@ public class PlayerMoveController : MonoBehaviour
         _curHealth = _maxHealth;
         _joystick.gameObject.SetActive(true);
         _moveVector = new Vector3(0, 0, 0);
-        _rb.drag= 1;
+        _rb.linearDamping= 1;
         _rb.mass = 5;
         _collider.isTrigger = false;
         AudioManager.Instance.StartBattle();
