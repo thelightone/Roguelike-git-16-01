@@ -52,6 +52,21 @@ public static class JSONSaver
 
     }
 
+    public static bool FileExists()
+    {
+
+        filePath = Path.Combine(Application.persistentDataPath, fileName);
+
+        if (File.Exists(filePath))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
   public  static GameData LoadJsonFromFile()
     {
         try

@@ -1,4 +1,5 @@
 using Facebook.MiniJSON;
+using Io.AppMetrica;
 using JetBrains.Annotations;
 using System;
 using System.Collections;
@@ -124,17 +125,17 @@ public class MatchManager : MonoBehaviour
         GAManager.instance.OnLevelStarted(level);
 
 
-        //LevelStartEventData eventData = new LevelStartEventData() { level = PrefsManager.GetChosenLevelCharter1(), days_since_reg = PrefsManager.DaysFromReg() };
-        //string json = JsonUtility.ToJson(eventData);
-        //AppMetrica.Instance.ReportEvent(AppMetricaEventsTypes.level_start, json);
+        LevelStartEventData eventData = new LevelStartEventData() { level = PrefsManager.GetChosenLevelCharter1(), days_since_reg = PrefsManager.DaysFromReg() };
+        string json = JsonUtility.ToJson(eventData);
+        AppMetrica.ReportEvent(AppMetricaEventsTypes.level_start, json);
 
-        //WaveStartEventData eventData2 = new WaveStartEventData() { level = PrefsManager.GetChosenLevelCharter1(), wave = _curWave, days_since_reg = PrefsManager.DaysFromReg() };
-        //json = JsonUtility.ToJson(eventData2);
-        //AppMetrica.Instance.ReportEvent(AppMetricaEventsTypes.wave_start, json);
+        WaveStartEventData eventData2 = new WaveStartEventData() { level = PrefsManager.GetChosenLevelCharter1(), wave = _curWave, days_since_reg = PrefsManager.DaysFromReg() };
+        json = JsonUtility.ToJson(eventData2);
+        AppMetrica.ReportEvent(AppMetricaEventsTypes.wave_start, json);
 
-        //AppMetrica.Instance.SendEventsBuffer();
+        AppMetrica.SendEventsBuffer();
 
-      //  StartCoroutine(FirstTutor());
+        //  StartCoroutine(FirstTutor());
     }
 
     private IEnumerator FirstTutor()
@@ -191,9 +192,9 @@ public class MatchManager : MonoBehaviour
         WaveStartEventData eventData = new WaveStartEventData() { level = PrefsManager.GetChosenLevelCharter1(), wave = _curWave, days_since_reg = PrefsManager.DaysFromReg() };
         string json = JsonUtility.ToJson(eventData);
 
-        //AppMetrica.Instance.ReportEvent(AppMetricaEventsTypes.wave_start, json);
+       AppMetrica.ReportEvent(AppMetricaEventsTypes.wave_start, json);
 
-        //AppMetrica.Instance.SendEventsBuffer();
+        AppMetrica.SendEventsBuffer();
     }
 
     public void Revive()
@@ -351,19 +352,18 @@ public class MatchManager : MonoBehaviour
             }
             PrefsManager.ChangePlayerXP(60);
 
-            //LevelCompleteEventData eventData2 = new LevelCompleteEventData()
-            //{
-            //    level = PrefsManager.GetChosenLevelCharter1(),
-            //    days_since_reg = PrefsManager.DaysFromReg(),
-            //    days_since_reg = PrefsManager.DaysFromReg()
-            //    heroLevel = (int)PlayerMoveController.Instance._level,
-            //    time_spent = (int)_spentTimeTotal
-            //};
+            LevelCompleteEventData eventData2 = new LevelCompleteEventData()
+            {
+                level = PrefsManager.GetChosenLevelCharter1(),
+                days_since_reg = PrefsManager.DaysFromReg(),
+                heroLevel = (int)PlayerMoveController.Instance._level,
+                time_spent = (int)_spentTimeTotal
+            };
 
-            //string json2 = JsonUtility.ToJson(eventData2);
-            //AppMetrica.Instance.ReportEvent(AppMetricaEventsTypes.level_complete, json2);
+            string json2 = JsonUtility.ToJson(eventData2);
+            AppMetrica.ReportEvent(AppMetricaEventsTypes.level_complete, json2);
 
-            //AppMetrica.Instance.SendEventsBuffer();
+            AppMetrica.SendEventsBuffer();
         }
 
         PrefsManager.ChangeCoins((int)PlayerMoveController.Instance.coins);
@@ -373,17 +373,17 @@ public class MatchManager : MonoBehaviour
         _uiManager.ShowWin();
         AudioManager.Instance.OnWin();
 
-        //WaveCompleteEventData eventData3 = new WaveCompleteEventData()
-        //{
-        //    level = PrefsManager.GetChosenLevelCharter1(),
-        //    wave = _curWave,
-        //    days_since_reg = PrefsManager.DaysFromReg(),
-        //};
+        WaveCompleteEventData eventData3 = new WaveCompleteEventData()
+        {
+            level = PrefsManager.GetChosenLevelCharter1(),
+            wave = _curWave,
+            days_since_reg = PrefsManager.DaysFromReg(),
+        };
 
-        //string json3 = JsonUtility.ToJson(eventData3);
-        //AppMetrica.Instance.ReportEvent(AppMetricaEventsTypes.wave_complete, json3);
+        string json3 = JsonUtility.ToJson(eventData3);
+        AppMetrica.ReportEvent(AppMetricaEventsTypes.wave_complete, json3);
 
-        //AppMetrica.Instance.SendEventsBuffer();
+        AppMetrica.SendEventsBuffer();
     }
 
     public void KillThemPartStart()
@@ -425,20 +425,20 @@ public class MatchManager : MonoBehaviour
     private void Lose()
     {
         GAManager.instance.OnLevelLose(level);
-        //LevelFailEventData eventData = new LevelFailEventData() 
-        //{
-        //    level = PrefsManager.GetChosenLevelCharter1(), 
-        //    wave = _curWave, 
-        //    days_since_reg = PrefsManager.DaysFromReg(), 
-        //    heroLevel = (int)PlayerMoveController.Instance._level, 
-        //    reason = PlayerMoveController.Instance.deadFromFall?"fall":"killed", 
-        //    time_spent = (int)_spentTimeTotal 
-        //};
+        LevelFailEventData eventData = new LevelFailEventData()
+        {
+            level = PrefsManager.GetChosenLevelCharter1(),
+            wave = _curWave,
+            days_since_reg = PrefsManager.DaysFromReg(),
+            heroLevel = (int)PlayerMoveController.Instance._level,
+            reason = PlayerMoveController.Instance.deadFromFall ? "fall" : "killed",
+            time_spent = (int)_spentTimeTotal
+        };
 
-        //string json = JsonUtility.ToJson(eventData);
-        //AppMetrica.Instance.ReportEvent(AppMetricaEventsTypes.level_fail, json);
+        string json = JsonUtility.ToJson(eventData);
+        AppMetrica.ReportEvent(AppMetricaEventsTypes.level_fail, json);
 
-        //AppMetrica.Instance.SendEventsBuffer();
+        AppMetrica.SendEventsBuffer();
 
         //YsoCorp.GameUtils.YCManager.instance.OnGameFinished(false);
         _uiManager.ShowLose();

@@ -1,3 +1,5 @@
 # ninja log v5
-1	135	7603773107066813	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	dce1bf2c0901126f
-137	283	7603773108640006	C:/Users/asus/Documents/GitHub/Roguelike-git-16-01/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/5s1n385i/obj/armeabi-v7a/libswappywrapper.so	f857252fc2c031f0
+1	123	7605393230418788	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	dce1bf2c0901126f
+123	407	7605393233334971	C:/Users/asus/Documents/GitHub/Roguelike-git-16-01/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/5s1n385i/obj/armeabi-v7a/libswappywrapper.so	f857252fc2c031f0
+2	149	7605413210483498	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	dce1bf2c0901126f
+150	457	7605413213673836	C:/Users/asus/Documents/GitHub/Roguelike-git-16-01/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/5s1n385i/obj/armeabi-v7a/libswappywrapper.so	f857252fc2c031f0
